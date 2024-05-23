@@ -1,0 +1,287 @@
+.kotak2 {
+    position: fixed;
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.kotak3 {
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgb(30, 30, 100);
+    width: 70vw;
+    height: 25vh;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.kotak3 h1 {
+    margin-top: 5%;
+}
+
+.kotak3 a {
+}
+
+#aisyah2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#aisyah3 {
+    display: none;
+}
+
+#rahman2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#rahman3 {
+    display: none;
+}
+
+#aminah2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#aminah3 {
+    display: none;
+}
+
+#vyna2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#vyna3 {
+    display: none;
+}
+
+#didi2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#didi3 {
+    display: none;
+}
+
+#nera2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#nera3 {
+    display: none;
+}
+
+#haris2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#haris3 {
+    display: none;
+}
+
+#indri2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#indri3 {
+    display: none;
+}
+
+#kevin2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#kevin3 {
+    display: none;
+}
+
+#fadil2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#fadil3 {
+    display: none;
+}
+
+#fayruz2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#fayruz3 {
+    display: none;
+}
+
+#adli2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#adli3 {
+    display: none;
+}
+
+#maulana2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#maulana3 {
+    display: none;
+}
+
+#arifin2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#arifin3 {
+    display: none;
+}
+
+#rifat2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#rifat3 {
+    display: none;
+}
+
+#rezki2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#rezki3 {
+    display: none;
+}
+
+#melda2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#melda3 {
+    display: none;
+}
+
+#maulina2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#maulina3 {
+    display: none;
+}
+
+#neneng2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#neneng3 {
+    display: none;
+}
+
+#ahur2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#ahur3 {
+    display: none;
+}
+
+#putri2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#putri3 {
+    display: none;
+}
+
+#ramdani2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#ramdani3 {
+    display: none;
+}
+
+#roykhan2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#roykhan3 {
+    display: none;
+}
+
+#tesya2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#tesya3 {
+    display: none;
+}
+
+#vedro2 {
+    float: left;
+    margin: 10px;
+    height: 90%;
+}
+
+#vedro3 {
+    display: none;
+}
+
+
+.close {
+    position: absolute;
+    right: 10vw;
+    top: 35vh;
+}

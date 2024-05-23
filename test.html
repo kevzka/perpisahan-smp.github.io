@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Audio with One Button</title>
+    <style>
+        .toggle-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<audio id="myaudio">
+    <source src="audionya.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div id="toggleButton" class="toggle-button">Play / Pause</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var audioElement = document.getElementById('myaudio');
+        var toggleButton = document.getElementById('toggleButton');
+        
+        toggleButton.addEventListener('click', function() {
+            if (audioElement.paused) {
+                audioElement.play();
+                toggleButton.textContent = 'Pause';
+            } else {
+                audioElement.pause();
+                toggleButton.textContent = 'Play';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

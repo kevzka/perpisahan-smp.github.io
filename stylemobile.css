@@ -1,0 +1,334 @@
+/* Global reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom styles */
+body {
+    background-image: url('background.jpg');
+}
+
+.tampilanawal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    background-color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-button {
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    z-index: 9999999;
+}
+
+.topbar {
+    position: fixed;
+    background-color: white;
+    height: 50px;
+    width: 100vw;
+    z-index: 9999;
+}
+
+.topbar img {
+    width: 50px;
+    background-color:  rgb(226, 226, 226);
+}
+
+.main1 {
+    position: relative;
+    padding-top: 50px;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.teks {
+    border: 2px solid white;
+    margin: auto;
+    width: 310px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+}
+
+.teks h1 {
+    position: relative;
+    right: 310px;
+    color: aqua;
+    font-size: 100px;
+    font-family: "Oswald", sans-serif;
+    z-index: 1;
+    animation: teks1 1s forwards;
+    -webkit-animation: teks1 1s forwards;
+}
+
+
+.teks h2 {
+    color: aqua;
+    font-size: 25px;
+    animation: teks2 1s reverse;
+    -webkit-animation: teks2 1500ms reverse;
+}
+
+.main1 img {
+    display: block;
+    position: relative;
+    width: 80vw;
+    top: 12.6vh;
+    margin: auto;
+    z-index: 1;
+}
+
+#kelas{
+    display: none;
+}
+
+.img-slider {
+    border: 2px solid white;
+    box-sizing: border-box;
+    position: relative;
+    /*Ubahposisimenjadirelative*/bottom: -30vh;
+    width: 70vw;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.main2 {
+    border: 2px solid white;
+    box-sizing: border-box;
+    width: 100vw;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.teks2 {
+    border: 2px solid white;
+    width: 310px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.teks2 h1 {
+    color: aqua;
+    font-size: 100px;
+    font-family: "Oswald", sans-serif;
+    z-index: 1;
+    animation: teks1 1s reverse;
+    -webkit-animation: teks1 1s reverse;
+}
+
+.gallery {
+    border: 2px solid white;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+
+.kotak {
+    display: inline-block;
+}
+
+.kotak img {
+    width: 50px;
+}
+
+.guru {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4vh;
+}
+
+.guru img {
+    width: 100px;
+}
+
+
+/* Sidebar styles */
+.sidebar {
+    box-shadow: 5px 0px 1px rgba(0, 0, 0, 0.258);
+    position: fixed;
+    left: -42vw;
+    /*Initialpositionoff-screen*/height: 100vh;
+    width: 40vw;
+    z-index: 99999;
+    background-color: rgb(8, 123, 224);
+    animation: none;
+    -webkit-animation: none;
+}
+
+.kotakmenu {
+    background-color: rgb(226, 226, 226);
+    height: 50px;
+    width: 40vw;
+}
+
+.sidebar img {
+    width: 50px;
+    background-color: rgb(226, 226, 226);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.test {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 354px;
+}
+
+.kosong {
+    display: none;
+}
+
+/* Animations */
+@keyframes teks1 {
+    0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    100% {
+        transform: translateX(310px);
+        -webkit-transform: translateX(310px);
+        -moz-transform: translateX(310px);
+        -ms-transform: translateX(310px);
+        -o-transform: translateX(310px);
+    }
+}
+
+@keyframes teks2 {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    100% {
+        transform: translateY(300px);
+        -webkit-transform: translateY(300px);
+        -moz-transform: translateY(300px);
+        -ms-transform: translateY(300px);
+        -o-transform: translateY(300px);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(0);
+        /*Initialpositionoff-screen*/
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+    100% {
+        transform: translateX(42vw);
+        /*Movesidebarintoview*/
+        -webkit-transform: translateX(42vw);
+        -moz-transform: translateX(42vw);
+        -ms-transform: translateX(42vw);
+        -o-transform: translateX(42vw);
+}
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(42vw);
+        /*Initialpositionoff-screen*/
+        -webkit-transform: translateX(42vw);
+        -moz-transform: translateX(42vw);
+        -ms-transform: translateX(42vw);
+        -o-transform: translateX(42vw);
+}
+    100% {
+        transform: translateX(0vw);
+        /*Movesidebarintoview*/
+        -webkit-transform: translateX(0vw);
+        -moz-transform: translateX(0vw);
+        -ms-transform: translateX(0vw);
+        -o-transform: translateX(0vw);
+}
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transition: all 4s;
+    -webkit-transition: all 4s;
+    -moz-transition: all 4s;
+    -ms-transition: all 4s;
+    -o-transition: all 4s;
+}
