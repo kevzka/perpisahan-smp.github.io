@@ -200,13 +200,12 @@ body {
     margin-top: 50px;
     border: 2px solid red;
     box-sizing: border-box;
-    width: 100px;
+    width: 25vw;
 }
 
 .siswa {
     display: flex;
     justify-content: space-between;
-    gap: 5px;
     flex-wrap: wrap;
     margin-top: 50px;
     border: 2px solid red;
@@ -215,7 +214,7 @@ body {
 }
 
 .kotak img {
-    width: 50px;
+    width: 16vw;
 }
 
 /**/
