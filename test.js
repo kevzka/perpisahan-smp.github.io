@@ -1,13 +1,3 @@
-function offkelas(){
-    console.log('Sidebar function called');
-    const sidebar = document.querySelector('#kelas');
-    sidebar.style.display = 'none';
-}
-function showkelas(){
-    console.log('Sidebar function called');
-    const sidebar = document.querySelector('#kelas');
-    sidebar.style.display = 'block';
-}
 function showsidebar() {
     console.log('Sidebar function called');
     const sidebar = document.querySelector('.sidebar');
@@ -18,6 +8,24 @@ function offsidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.animation = 'slideOut 1s forwards'; // Ubah animasi
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    var audioElement = document.getElementById('myaudio');
+    var toggleButton = document.getElementById('toggleButton');
+    const page = document.querySelector('.tampilanawal');
+    
+    toggleButton.addEventListener('click', function() {
+        if (audioElement.paused) {
+            audioElement.play();
+            page.style.display = 'none';
+            toggleButton.textContent = 'Pause';
+        } else {
+            audioElement.pause();
+            toggleButton.textContent = 'Play';
+        }
+    });
+});
+
 //siswa
 
 function offpage() {
@@ -275,66 +283,3 @@ function vedro() {
     page.style.display = 'flex';
     vedro.style.display = 'block'; // Ubah animasi
 }
-
-//-----audio
-document.addEventListener('DOMContentLoaded', (event) => {
-    var audioElement = document.getElementById('myaudio');
-    var toggleButton = document.getElementById('toggleButton');
-    const page = document.querySelector('.tampilanawal');
-    
-    toggleButton.addEventListener('click', function() {
-        if (audioElement.paused) {
-            audioElement.play();
-            page.style.display = 'none';
-            toggleButton.textContent = 'Pause';
-        } else {
-            audioElement.pause();
-            toggleButton.textContent = 'Play';
-        }
-    });
-});
-
-document.getElementById('toggleButton').addEventListener('click', function() {
-    var elements = document.getElementsByClassName('show');
-    for(var i = 0; i < elements.length; i++) {
-        elements[i].classList.add('hidden');
-        elements[i].classList.remove('show');
-    }
-    setTimeout(function() {
-        var hiddenElements = document.getElementsByClassName('hidden');
-        for(var i = 0; i < hiddenElements.length; i++) {
-            hiddenElements[i].classList.add('show');
-            hiddenElements[i].classList.remove('hidden');
-        }
-    }, 500); // Ganti 1000 dengan jumlah milidetik yang diinginkan (dalam contoh ini, 1 detik)
-});
-
-
-
-
-
-
-
-
-
-// Function to update area coordinates based on image resizing
-function updateMapCoordinates() {
-    const image = document.getElementById('kelas');
-    const areas = document.querySelectorAll('map[name="siswa"] area');
-    const widthRatio = image.naturalWidth / image.offsetWidth;
-    const heightRatio = image.naturalHeight / image.offsetHeight;
-
-    areas.forEach(area => {
-        const coords = area.getAttribute('coords').split(',');
-        for (let i = 0; i < coords.length; i += 2) {
-            coords[i] = Math.round(coords[i] / widthRatio);
-            coords[i + 1] = Math.round(coords[i + 1] / heightRatio);
-        }
-        area.setAttribute('coords', coords.join(','));
-    });
-}
-
-// Call the function once on page load
-window.addEventListener('load', updateMapCoordinates);
-// Call the function whenever the window is resized
-window.addEventListener('resize', updateMapCoordinates);
