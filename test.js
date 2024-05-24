@@ -26,6 +26,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+document.getElementById('toggleButton').addEventListener('click', function() {
+    var elements = document.getElementsByClassName('show');
+    for(var i = 0; i < elements.length; i++) {
+        elements[i].classList.add('hidden');
+        elements[i].classList.remove('show');
+    }
+    setTimeout(function() {
+        var hiddenElements = document.getElementsByClassName('gambar2');
+        for(var i = 0; i < hiddenElements.length; i++) {
+            hiddenElements[i].classList.add('show');
+            hiddenElements[i].classList.remove('hidden');
+        }
+    }, 500); // Ganti 1000 dengan jumlah milidetik yang diinginkan (dalam contoh ini, 1 detik)
+});
+
 //siswa
 
 function offpage() {
