@@ -3,43 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control Audio with One Button</title>
+    <title>Profile Display</title>
     <style>
-        .toggle-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            cursor: pointer;
+        .kotak3 {
+            border: 1px solid #000;
+            margin: 10px;
+            padding: 10px;
+        }
+        #aisyah3 {
+            display: block;
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
 <body>
+    <div class="kotak2"></div>
+    <button onclick="hideAisyah()">Hide Aisyah</button>
+    <button onclick="showAisyah()">Show Aisyah</button>
 
-<audio id="myaudio">
-    <source src="audionya.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-<div id="toggleButton" class="toggle-button">Play / Pause</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        var audioElement = document.getElementById('myaudio');
-        var toggleButton = document.getElementById('toggleButton');
-        
-        toggleButton.addEventListener('click', function() {
-            if (audioElement.paused) {
-                audioElement.play();
-                toggleButton.textContent = 'Pause';
-            } else {
-                audioElement.pause();
-                toggleButton.textContent = 'Play';
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const profiles = [
+            {
+                id: 'rahman3',
+                name: 'rahman',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16gV9zS_3kN-S0RZ5lxZI78jnYN6xzuEH',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'aisyah3',
+                name: 'aisyah',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15bpKS0pDvyH3h538yLvdYVeg6GiX6AVM',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'aminah3',
+                name: 'aminah',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15kTn_mqpuWB1U_NrvozHpROBEToOKQ9f',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'vyna3',
+                name: 'vyna',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15iqnE8lI4OTuQsALAz2_iBZ7_JfWWWGs',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'didi3',
+                name: 'didi',
+                imgSrc: 'https://drive.google.com/thumbnail?id=162f6lMwHomE2_GK6vbM4wF5EchxVVeCE',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'nera3',
+                name: 'nera',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15rpgIRv_wqJmCPve59VF_eD6kB4tEP2L',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'haris3',
+                name: 'haris',
+                imgSrc: 'https://drive.google.com/thumbnail?id=165qVdck_rjGtyUh30VDyCJedcldNFB-I',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'indri3',
+                name: 'indri',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15WRX7gJG1WqxOhAlzlPoWcQijqlonoTk',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'kevin3',
+                name: 'kevin',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16QYatFwpAO0tHiBSe1hWsCUQod7-YVe-',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'fadil3',
+                name: 'fadil',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16L3cDDhV4JME2N8v71Am7-RTgcP1gL1Y',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'maulina3',
+                name: 'maulina',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15bQ473YqeY0ZedlTs3i15KQCzzP1-U1l',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'melda3',
+                name: 'melda',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15URSI10DHdT4_dkK143b3AF0EcHakGmG',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'maulana3',
+                name: 'maulana',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16Vtn_eACXjDLnzCrPQI3nL7ioMKhJ29p',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'adli3',
+                name: 'adli',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16A1iW6THxoMtXzUYSUBKoTaEjqSWV-mI',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'fayruz3',
+                name: 'fayruz',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16mTUjlyrlyS6oLvwzWgfTkhOKi4gyPj7',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'rezki3',
+                name: 'rezki',
+                imgSrc: 'https://drive.google.com/thumbnail?id=163SdG9yyp17fhLfDj2r4IFh_34mZPole',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'rifat3',
+                name: 'rifat',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15z7DDd0cLsB4aw_XJK6XhvwmLOD8dLbq',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'arifin3',
+                name: 'arifin',
+                imgSrc: 'https://drive.google.com/thumbnail?id=160Dr-t4zBsW_Y67K8NJa75U2UGtFFGRg',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'neneng3',
+                name: 'neneng',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15pOD8xwOqHxjAft0nL564dbzoX07-Pt8',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'ahur3',
+                name: 'ahur',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16ROQBltYjF1hJ2Cw1C2YUzTtLhICaGFS',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'putri3',
+                name: 'putri',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15VY7KJ4whxMM9pd1FeYYKJe4VD_3hZjQ',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'ramdani3',
+                name: 'ramdani',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16d3Wp6ciRc4DANQyFfVmu1czAwPnJM-6',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'roykhan3',
+                name: 'roykhan',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15qoiMlqstPaqVbXQ822Ut9zl_1L8zkSV',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'tesya3',
+                name: 'tesya',
+                imgSrc: 'https://drive.google.com/thumbnail?id=15o-DrMyP5-PHeEm-AzA4FRTTjzT04Oy3',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
+            },
+            {
+                id: 'vedro3',
+                name: 'vedro',
+                imgSrc: 'https://drive.google.com/thumbnail?id=16dD-87YXnfsnpLsTw7gKe8d0E9XZ6tri',
+                dob: '-none-',
+                hobby: '',
+                nickname: ''
             }
-        });
-    });
-</script>
+        ];
 
+            const profilesContainer = document.querySelector('.kotak2');
+
+            profiles.forEach(profile => {
+                const profileDiv = document.createElement('div');
+                profileDiv.classList.add('kotak3');
+                profileDiv.id = profile.id;
+
+                profileDiv.innerHTML = `
+                    <img src="${profile.imgSrc}" id="${profile.id.replace('3', '2')}" alt="${profile.name}">
+                    <h1>
+                        Nama : ${profile.name} <br>
+                        tgl/lhir : ${profile.dob}<br>
+                        hobi : ${profile.hobby}<br>
+                        julukan : ${profile.nickname}
+                    </h1>
+                    <a href="#">
+                        <h1>whatsapp</h1>
+                        <h1>instagram</h1>
+                    </a>
+                `;
+                profilesContainer.appendChild(profileDiv);
+            });
+        });
+
+        function aisyah() {
+            const aisyahElement = document.getElementById('aisyah3');
+            console.log(aisyah)
+            if (aisyahElement) {
+                aisyahElement.style.display = 'none';
+            } else {
+                console.error('Element with ID "aisyah3" not found.');
+            }
+        }
+
+        
+    </script>
 </body>
 </html>

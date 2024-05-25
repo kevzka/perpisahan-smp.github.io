@@ -5,16 +5,18 @@
     height: 100vh;
     z-index: 999;
     display: none;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
 }
 
 .kotak3 {
+    display: block;
     border: 2px solid white;
     box-sizing: border-box;
     border-radius: 10px;
     background-color: rgb(30, 30, 100);
-    width: 70vw;
+    width: 90vw;
     height: 25vh;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -23,6 +25,7 @@
 }
 
 .kotak3 h1 {
+    color: white;
     margin-top: 5%;
 }
 
@@ -36,7 +39,7 @@
 }
 
 #aisyah3 {
-    display: none;
+    display: block;
 }
 
 #rahman2 {
