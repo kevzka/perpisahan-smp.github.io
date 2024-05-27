@@ -569,8 +569,6 @@ function checkDisplay() {
 setInterval(checkDisplay, 1);
 
 setTimeout(() => {
-    let currentIndex = divIndex;
-
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
 
@@ -578,30 +576,22 @@ setTimeout(() => {
     function updateGallery() {
         images.forEach((id, index) => {
             const element = document.getElementById(id);
-            element.style.display = (index === currentIndex) ? 'block' : 'none';
+            element.style.display = (index === divIndex) ? 'block' : 'none';
         });
     }
 
     // Event listener untuk tombol sebelumnya
     prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        divIndex = (divIndex > 0) ? divIndex - 1 : images.length - 1;
         updateGallery();
     });
 
     // Event listener untuk tombol berikutnya
     nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        divIndex = (divIndex < images.length - 1) ? divIndex + 1 : 0;
         updateGallery();
     });
 
-    // Update currentIndex berdasarkan divIndex setiap milidetik
-    setInterval(() => {
-        if (divIndex !== undefined && divIndex !== currentIndex) {
-            currentIndex = divIndex;
-            updateGallery();
-        }
-    }, 1);
-
-    // Tampilkan galeri awal
+    // Update gallery secara langsung tanpa perlu interval tambahan
     updateGallery();
-}, 2000);
+}, 2);

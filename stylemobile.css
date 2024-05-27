@@ -55,7 +55,7 @@ body {
     height: 100vh;
     z-index: 999999;
     background-color: #007BFF;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
