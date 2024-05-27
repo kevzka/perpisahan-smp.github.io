@@ -533,3 +533,75 @@ function vedro() {
         console.error('Element with ID "vedro3" not found.');
     }
 }
+
+const images = ['rahman3','aisyah3','aminah3','vyna3','didi3','nera3','haris3','indri3','kevin3','fadil3','maulina3','melda3','maulana3','adli3','fayruz3','rezki3','rifat3','arifin3','neneng3','ahur3','putri3','ramdani3','roykhan3','tesya3','vedro3'];
+
+// Objek untuk menyimpan status sebelumnya dari setiap elemen
+const previousDisplayStatus = {};
+
+// Variabel global untuk menyimpan divIndex
+let divIndex;
+
+// Membuat fungsi untuk memeriksa perubahan dalam display
+function checkDisplay() {
+    images.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            const currentDisplay = window.getComputedStyle(element).display;
+            const previousDisplay = previousDisplayStatus[id];
+            
+            // Memeriksa apakah display sebelumnya sama dengan display saat ini
+            if (currentDisplay === 'block' && previousDisplay !== 'block') {
+                console.log(`Element dengan id ${id} memiliki display block.`);
+                
+                // Menampilkan indeks elemen dengan display block
+                divIndex = images.indexOf(id);
+                console.log(`ID div '${id}' terletak di urutan ${divIndex} dalam array images.`);
+            }
+
+            // Menyimpan display saat ini sebagai display sebelumnya
+            previousDisplayStatus[id] = currentDisplay;
+        }
+    });
+}
+
+// Memanggil fungsi checkDisplay setiap milidetik
+setInterval(checkDisplay, 1);
+
+setTimeout(() => {
+    let currentIndex = divIndex;
+
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    // Fungsi untuk memperbarui tampilan galeri
+    function updateGallery() {
+        images.forEach((id, index) => {
+            const element = document.getElementById(id);
+            element.style.display = (index === currentIndex) ? 'block' : 'none';
+        });
+    }
+
+    // Event listener untuk tombol sebelumnya
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateGallery();
+    });
+
+    // Event listener untuk tombol berikutnya
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateGallery();
+    });
+
+    // Update currentIndex berdasarkan divIndex setiap milidetik
+    setInterval(() => {
+        if (divIndex !== undefined && divIndex !== currentIndex) {
+            currentIndex = divIndex;
+            updateGallery();
+        }
+    }, 1);
+
+    // Tampilkan galeri awal
+    updateGallery();
+}, 2000);

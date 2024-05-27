@@ -4,7 +4,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 999;
-    display: none;
+    display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@
 }
 
 #aisyah3 {
-    display: none;
+    display: block;
 }
 
 #rahman2 {

@@ -55,7 +55,7 @@ body {
     height: 100vh;
     z-index: 999999;
     background-color: #007BFF;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -166,6 +166,22 @@ body {
     margin-top: 5vh;
     border: 2px solid red;
     width: 80%;
+}
+
+.kotak4 {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    top: 230px;
+    width: 100vw;
+    height: auto;
+}
+
+.gambar3 {
+    position: absolute;
+    margin-top: 5vh;
+    border: 2px solid red;
+    width: 100%;
 }
 
 .image-slider {

@@ -8,6 +8,11 @@ function offsidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.animation = 'slideOut 1s forwards'; // Ubah animasi
 }
+function gambarOn() {
+    console.log('Sidebar function called');
+    const gambar2 = document.querySelector('.kotak4');
+    gambar2.style.display = 'flex'; // Ubah animasi
+}
 
 document.addEventListener('DOMContentLoaded', (event) => {
     var audioElement = document.getElementById('myaudio');
