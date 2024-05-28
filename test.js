@@ -10,8 +10,12 @@ function offsidebar() {
 }
 function gambarOn() {
     console.log('Sidebar function called');
-    const gambar2 = document.querySelector('.kotak4');
-    gambar2.style.display = 'flex'; // Ubah animasi
+    const gambar2 = document.querySelector('#resizableImage');
+    gambar2.style.visibility = 'visible'; // Ubah animasi
+    setTimeout(function() {
+        gambar2.useMap = '#siswa';
+        console.log('yak bisa')
+    }, 10);
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -56,6 +60,7 @@ document.getElementById('toggleButton').addEventListener('click', function() {
 function offpage() {
     console.log('Sidebar function called');
     const page = document.querySelector('.kotak2');
+    const tombol = document.querySelector('.tombol');
     const aisyah = document.getElementById('aisyah3');
     const rahman = document.getElementById('rahman3');
     const aminah = document.getElementById('aminah3');
@@ -81,7 +86,12 @@ function offpage() {
     const roykhan = document.getElementById('roykhan3');
     const tesya = document.getElementById('tesya3');
     const vedro = document.getElementById('vedro3');
-    page.style.display = 'none';
+    setTimeout(() => {
+        tombol.style.display = 'inline-block';
+        page.style.display = 'none';
+    }, 1000);
+    tombol.style.display = 'none';
+    page.style.animation = 'kotak2 3s reverse forwards';
     aisyah.style.display = 'none';
     rahman.style.display = 'none';
     aminah.style.display = 'none';

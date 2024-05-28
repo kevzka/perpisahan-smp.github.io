@@ -265,6 +265,7 @@ function aisyah() {
     if (aisyahElement) {
         aisyahElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "aisyah3" not found.');
     }
@@ -276,6 +277,7 @@ function rahman() {
     if (rahmanElement) {
         rahmanElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "rahman3" not found.');
     }
@@ -287,6 +289,7 @@ function aminah() {
     if (aminahElement) {
         aminahElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "aminah3" not found.');
     }
@@ -298,6 +301,7 @@ function vyna() {
     if (vynaElement) {
         vynaElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "vyna3" not found.');
     }
@@ -309,6 +313,7 @@ function didi() {
     if (didiElement) {
         didiElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "didi3" not found.');
     }
@@ -320,6 +325,7 @@ function nera() {
     if (neraElement) {
         neraElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "nera3" not found.');
     }
@@ -331,6 +337,7 @@ function haris() {
     if (harisElement) {
         harisElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "haris3" not found.');
     }
@@ -342,6 +349,7 @@ function indri() {
     if (indriElement) {
         indriElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "indri3" not found.');
     }
@@ -353,6 +361,7 @@ function kevin() {
     if (kevinElement) {
         kevinElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "kevin3" not found.');
     }
@@ -364,6 +373,7 @@ function fadil() {
     if (fadilElement) {
         fadilElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "fadil3" not found.');
     }
@@ -375,6 +385,7 @@ function maulina() {
     if (maulinaElement) {
         maulinaElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "maulina3" not found.');
     }
@@ -386,6 +397,7 @@ function melda() {
     if (meldaElement) {
         meldaElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "melda3" not found.');
     }
@@ -397,6 +409,7 @@ function maulana() {
     if (maulanaElement) {
         maulanaElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "maulana3" not found.');
     }
@@ -408,6 +421,7 @@ function adli() {
     if (adliElement) {
         adliElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "adli3" not found.');
     }
@@ -419,6 +433,7 @@ function fayruz() {
     if (fayruzElement) {
         fayruzElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "fayruz3" not found.');
     }
@@ -430,6 +445,7 @@ function rezki() {
     if (rezkiElement) {
         rezkiElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "rezki3" not found.');
     }
@@ -441,6 +457,7 @@ function rifat() {
     if (rifatElement) {
         rifatElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "rifat3" not found.');
     }
@@ -452,6 +469,7 @@ function arifin() {
     if (arifinElement) {
         arifinElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "arifin3" not found.');
     }
@@ -463,6 +481,7 @@ function neneng() {
     if (nenengElement) {
         nenengElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "neneng3" not found.');
     }
@@ -474,6 +493,7 @@ function ahur() {
     if (ahurElement) {
         ahurElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "ahur3" not found.');
     }
@@ -485,6 +505,7 @@ function putri() {
     if (putriElement) {
         putriElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "putri3" not found.');
     }
@@ -496,6 +517,7 @@ function ramdani() {
     if (ramdaniElement) {
         ramdaniElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "ramdani3" not found.');
     }
@@ -507,6 +529,7 @@ function roykhan() {
     if (roykhanElement) {
         roykhanElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "roykhan3" not found.');
     }
@@ -518,6 +541,7 @@ function tesya() {
     if (tesyaElement) {
         tesyaElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "tesya3" not found.');
     }
@@ -529,6 +553,7 @@ function vedro() {
     if (vedroElement) {
         vedroElement.style.display = 'block';
         page.style.display = 'flex';
+        page.style.animation = 'kotak2 1s forwards';
     } else {
         console.error('Element with ID "vedro3" not found.');
     }

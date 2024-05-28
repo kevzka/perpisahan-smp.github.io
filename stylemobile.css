@@ -46,7 +46,15 @@ table {
 /* Custom styles */
 
 body {
-    background-image: url('background.jpg');
+    background-color: #47b5ff;
+}
+.container {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scrollsnap {
+    scroll-snap-align: start;
 }
 
 .tampilanawal {
@@ -71,12 +79,36 @@ body {
     z-index: 9999999;
 }
 
+.tampilanawal a {
+    border-radius: 5px;
+    background-color: #1363df;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tampilanawal a:hover {
+    border-radius: 5px;
+    font-size: larger;
+    background-color: red;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
 .topbar {
     position: fixed;
     width: 100vw;
     height: 50px;
-    background-color: white;
+    background-color: #dff6ff;
     z-index: 1;
+    border-bottom: 2px solid #1363df;
+    box-sizing: border-box;
 }
 
 .topbar img {
@@ -85,7 +117,9 @@ body {
 
 .sidebar {
     position: fixed;
-    background-color: blue;
+    border-right: 2px solid #dff6ff;
+    box-sizing: border-box;
+    background-color: #1363df;
     width: 150px;
     height: 100vh;
     z-index: 1;
@@ -96,9 +130,10 @@ body {
     -o-transform: translateX(-150px);
 }
 
-.TopSidebar {    
+.TopSidebar {
     display: flex;
-    background-color: white;
+    box-sizing: border-box;
+    background-color: #dff6ff;
     width: 100%;
     height: 50px;
     flex-direction: row;
@@ -116,7 +151,6 @@ body {
 
 .main1 {
     position: relative;
-    border: 2px solid red;
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
@@ -129,15 +163,21 @@ body {
 
 .teks {
     margin-top: 50px;
-    border: 2px solid red;
     width: fit-content;
     height: 125px;
     overflow: hidden;
 }
 
-.teks h1 {
-    color: aqua;
+.teks h1,
+.teks2 {
+    color: #dff6ff;
     font-size: 100px;
+    text-shadow: 
+    -2px -2px 0 #1363df,  
+    2px -2px 0 #1363df,
+    -2px 2px 0 #1363df,
+    2px 2px 0 #1363df,
+    5px 5px 2px #06283d;
     font-family: "Oswald", sans-serif;
 }
 
@@ -154,47 +194,82 @@ body {
     -o-transform: translateX(-300px);
 }
 
-.teks h2 {
-    color: aqua;
+/* .teks h2 {
     font-size: 25px;
     text-align: center;
     animation: TeksH2 1s forwards;
     -webkit-animation: TeksH2 1s forwards;
-}
+} */
 
 .gambar2 {
+    padding: 2px;
+    box-shadow: 5px 5px 2px #06283d;
+    border: 2px solid #1363df;
+    background-color: #dff6ff;
     margin-top: 5vh;
-    border: 2px solid red;
     width: 80%;
 }
 
-.kotak4 {
+/* .kotak4 {
     position: absolute;
-    display: none;
+    display: block;
     justify-content: center;
     top: 230px;
     width: 100vw;
     height: auto;
-}
+} */
 
-.gambar3 {
+#resizableImage {
+    visibility: hidden;
     position: absolute;
-    margin-top: 5vh;
-    border: 2px solid red;
-    width: 100%;
+    top: 250px;
+    width: 100vw;
+    z-index: 2;
 }
 
-.image-slider {
+.image-slider,
+.image-slider2 {
+    background-color: #dff6ff;
     position: absolute;
     bottom: 10%;
-    border: 2px solid rgb(68, 0, 255);
-    height: 150px;
-    width: 80%;
+    width: 240px;
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+    border-top: 2px solid #1363df;
+    border-bottom: 2px solid #1363df;
+}
+
+.image-slider2 {
+    box-shadow: 5px 5px 2px #06283d;
+    border: 2px solid #1363df;
+    height: 118.76px;
+    width: 260px;
+}
+
+.slider {
+    white-space: nowrap;
+    font-size: 0;
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
+    animation: imgslider 60s infinite linear;
+    -webkit-animation: imgslider 60s infinite linear;
+}
+
+.kotak5 {
+    padding: 0 5px;
+    display: inline-block;
+}
+
+.kotak5 img {
+    width: 70px;
 }
 
 .main2 {
     padding-top: 50px;
-    border: 2px solid red;
     box-sizing: border-box;
     width: 100vw;
     display: flex;
@@ -205,14 +280,12 @@ body {
 
 .teks2 {
     margin-top: 50px;
-    border: 2px solid red;
     width: fit-content;
     height: fit-content;
     overflow: hidden;
 }
 
 .teks2 h1 {
-    color: aqua;
     font-size: 100px;
     font-family: "Oswald", sans-serif;
     animation: TeksH1 1s forwards;
@@ -220,7 +293,6 @@ body {
 }
 
 .gallery {
-    border: 2px solid red;
     box-sizing: border-box;
     width: 85vw;
     display: flex;
@@ -231,27 +303,54 @@ body {
 }
 
 .guru {
+    
+    box-shadow: 5px 5px 2px #06283d;
+    border: 2px solid #1363df;
+    background-color: #dff6ff;
     margin-top: 50px;
-    border: 2px solid red;
     box-sizing: border-box;
+    padding: 2px;
     width: 25vw;
 }
 
 .siswa {
+    box-shadow: 5px 5px 2px #06283d;
+    border: 2px solid #1363df;
+    background-color: #dff6ff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 50px;
-    border: 2px solid red;
     box-sizing: border-box;
+    padding-top: 2px;
     width: 100%;
 }
 
 .kotak img {
-    width: 16vw;
+    width: 15vw;
+}
+/* media quaries */
+
+@media (min-width: 600px){
+    .gambar2 {
+        max-width: 480px;
+    }
 }
 
-/**/
+@media (min-width: 1024px){
+    .teks {
+        position: absolute;
+        top: 125px;
+        left: 10vw;
+    }
+    .gambar2 {
+        position: absolute;
+        right: 10vw;
+        max-width: 480px;
+    }
+}
+
+/*animasi*/
 
 @keyframes slideIn {
     0%{
@@ -319,6 +418,23 @@ body {
         -moz-transform: translateY(0px);
         -ms-transform: translateY(0px);
         -o-transform: translateY(0px);
+}
+}
+
+@keyframes imgslider {
+    0%{
+        transform: translate(-5px);
+        -webkit-transform: translate(-5px);
+        -moz-transform: translate(-5px);
+        -ms-transform: translate(-5px);
+        -o-transform: translate(-5px);
+}
+    100%{
+        transform: translateX(calc(80px * -25));
+        -webkit-transform: translateX(calc(80px * -25));
+        -moz-transform: translateX(calc(80px * -25));
+        -ms-transform: translateX(calc(80px * -25));
+        -o-transform: translateX(calc(80px * -25));
 }
 }
 

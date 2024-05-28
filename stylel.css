@@ -1,6 +1,6 @@
 .kotak2 {
     position: fixed;
-    background-color: red;
+    background-color: rgba(0, 0, 0, .5);
     width: 100vw;
     height: 100vh;
     z-index: 999;
@@ -12,10 +12,11 @@
 
 .kotak3 {
     display: block;
-    border: 2px solid white;
+    border: 2px solid #1363df;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: rgb(30, 30, 100);
+    background-color: #dff6ff;
+    box-shadow: 3px 3px 2px #06283d;
     width: 90vw;
     height: 25vh;
     -webkit-border-radius: 10px;
@@ -25,11 +26,12 @@
 }
 
 .kotak3 h1 {
-    color: white;
+    color: #1363df;
     margin-top: 5%;
 }
 
 .kotak3 a {
+    text-decoration: none;
 }
 
 #aisyah2 {
@@ -287,4 +289,13 @@
     position: absolute;
     right: 10vw;
     top: 35vh;
+}
+
+@keyframes kotak2 {
+    0%{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, .5);
+    }
 }
