@@ -171,7 +171,7 @@ body {
 .teks h1,
 .teks2 {
     color: #dff6ff;
-    font-size: 100px;
+    font-size: 75px;
     text-shadow: 
     -2px -2px 0 #1363df,  
     2px -2px 0 #1363df,
@@ -243,7 +243,7 @@ body {
 .image-slider2 {
     box-shadow: 5px 5px 2px #06283d;
     border: 2px solid #1363df;
-    height: 118.76px;
+    height: 128.76px;
     width: 260px;
 }
 
@@ -260,12 +260,17 @@ body {
 }
 
 .kotak5 {
-    padding: 0 5px;
+    box-sizing: border-box;
+    padding: 5px;
     display: inline-block;
 }
 
 .kotak5 img {
     width: 70px;
+}
+
+.slider:hover {
+    animation-play-state: paused;
 }
 
 .main2 {
@@ -286,7 +291,7 @@ body {
 }
 
 .teks2 h1 {
-    font-size: 100px;
+    font-size: 75px;
     font-family: "Oswald", sans-serif;
     animation: TeksH1 1s forwards;
     -webkit-animation: TeksH1 1s forwards;
